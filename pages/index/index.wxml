@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+    <mychild image-src="{{imgsrc}}" bindmyevent="onMyEvent">
+    </mychild>
+    <slide slide-list="{{slidedata}}"></slide>
+</view>

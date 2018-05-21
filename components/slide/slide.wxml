@@ -1,0 +1,15 @@
+<view class="showslide {{hidden ? 'opacity' : ''}} {{show ? 'opacityy' : ''}}">
+	<image src="../../images/Category.png" class="imgone" catchtap="doshowslide"></image>
+</view>
+<view class="slide {{hidden ? 'move' : ''}} {{show ? 'showmove' : ''}}">
+	<view class="slidewrap">
+		<view class="slide-img" catchtap="doslide">
+			<image src="../../images/Category.png" class="img"></image>
+		</view>
+		<view wx:for="{{slideList}}" wx:key="index">
+			<view class="slide-list">
+				<view>{{item}}</view>
+			</view>
+	    </view>
+	</view>
+</view>

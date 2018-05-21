@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#e29bbb",
+    "navigationBarTitleText": "雅魅",
+    "navigationBarTextStyle":"light"
+  }
+}

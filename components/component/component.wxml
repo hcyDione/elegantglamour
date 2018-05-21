@@ -1,0 +1,15 @@
+<!-- 这是自定义组件的内部WXML结构 -->
+<slot name="header"></slot>
+<view class="wrapper" >
+	<view wx:for="{{imageSrc}}"  wx:key="index">
+    <view class="wrap-list">
+    	<view class="wrap-logo" bindtap="ontap">
+    		<image src="{{item}}" class="img">
+    		</image>
+    	</view>
+    </view>
+    </view>
+</view>
+<view> {{behaviordata}} </view>
+<slot name="footer"></slot>
+

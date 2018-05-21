@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mychild": "/components/component/component",
+    "slide": "/components/slide/slide"
+  }
+}

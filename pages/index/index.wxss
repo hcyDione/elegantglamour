@@ -1,0 +1,9 @@
+/**index.wxss**/
+.container{
+	width:100%;
+	height:auto;
+	display:block;
+}
+.mychild{
+	background-color:#e29bbb;
+}

@@ -1,0 +1,25 @@
+/* 这里的样式只应用于这个自定义组件 */
+.wrapper {
+   width:100%;
+   height:auto;
+   display:block;
+}
+.wrap-list{
+	width:100%;
+	height:100rpx;
+	padding:30rpx 0rpx;
+	display:block;
+	border-bottom:20rpx solid #f4f4f4;
+}
+.wrap-logo{
+	width:100rpx;
+	height:100rpx;
+	display:block;
+	margin:0 auto;
+}
+.img{
+    width:100rpx;
+    height:100rpx;
+    border-radius: 50rpx;		
+}
+
