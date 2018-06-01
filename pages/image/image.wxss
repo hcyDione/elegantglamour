@@ -1,0 +1,19 @@
+/**index.wxss**/
+.container{
+	width:100%;
+	height:auto;
+	display:block;
+}
+.wrap-list{
+	margin:20rpx 0rpx;
+	padding:0 20rpx;
+	display:block;
+	height: auto;
+	border-bottom:20rpx solid #f4f4f4;
+}
+.wrap-logo{
+	width: 100%;
+}
+.wrap-logo img{
+	width: 100%;
+}

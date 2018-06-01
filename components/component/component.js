@@ -23,7 +23,7 @@ Component({
     ontap:function(){
        var myEventdetail = {}
        var myEventOption = {}
-       this.triggerEvent('myevent',myEventdetail,myEventOption)
+       this.triggerEvent('myevent')
     }
   }
 })

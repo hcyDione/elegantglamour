@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+	<view wx:for="{{imageSrc}}"  wx:key="index">
+    <view class="wrap-list">
+    	<view class="wrap-logo" bindtap="openImg">
+    		<image src="{{item}}" mode="widthFix" bind="addwatermark" data-src="{{item}}">
+    		</image>
+    	</view>
+    </view>
+    </view>
+    <canvas id="watermark">
+    </canvas>
+</view>

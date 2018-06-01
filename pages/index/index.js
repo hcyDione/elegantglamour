@@ -18,8 +18,9 @@ Page({
     })
   },
   onMyEvent:function(e){
-    console.log('红红的花朵我的家')
-    console.log(e.detail)
+    wx.navigateTo({
+      url: '../image/image'
+    })
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
