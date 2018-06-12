@@ -7,8 +7,8 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    imgsrc:['../../images/flower.jpg','../../images/flower.jpg','../../images/flower.jpg','../../images/flower.jpg','../../images/flower.jpg'],
-    slidedata: ['侧滑栏','侧滑栏','侧滑栏','侧滑栏','侧滑栏'],
+    imgsrc:['../../images/flower.jpg','../../images/flower.jpg','../../images/flower.jpg'],
+    slidedata: ['图片','裁剪','无像','素比'],
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
@@ -20,6 +20,11 @@ Page({
   onMyEvent:function(e){
     wx.navigateTo({
       url: '../image/image'
+    })
+  },
+  doclup:function (e) {
+    wx.navigateTo({
+      url: '../canvas/canvas'
     })
   },
   onLoad: function () {
@@ -49,6 +54,14 @@ Page({
         }
       })
     }
+    /*canvas绘制截屏入口*/
+    const ctx = wx.createCanvasContext('clip')
+    const grd = ctx.createCircularGradient(160, 60, 50)
+    grd.addColorStop(0, 'red')
+    grd.addColorStop(1, 'white')
+    ctx.setFillStyle(grd)
+    ctx.fillRect(10, 10, 300, 200)
+    ctx.draw()
   },
   getUserInfo: function(e) {
     console.log(e)

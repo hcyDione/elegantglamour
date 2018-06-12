@@ -1,0 +1,198 @@
+/*css common*/
+.wraper{
+	width:100%;
+	height:100%;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+button::after{
+    border: none;
+}
+/*css main*/
+.bottom {
+	height: 40px;
+	width:92%;
+	padding:10px 4%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.bottom button{
+	width:120px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	color: #fff;
+	background-color: #e29bbb;
+	text-align:center;
+}
+.wrapcontainer{
+	width:100%;
+	display: block;
+	background-color: #000;
+	position: relative;
+}
+.wrapcontainer  image{
+	width:100%;
+	margin-top: 40px;
+}
+.cutwrap{
+    position: absolute;
+    background: rgba(255,255,255,0.3); 
+    z-index:2;
+}
+.cutwrap .cuter{
+	width: 100%;
+	height: 100%;
+	display: block;
+	overflow: visible;
+	position: relative;
+	outline: 1px solid #e29bbb;
+}
+/*横向虚线*/
+.cutwrap .dashed-row{
+    position: absolute;
+    top:33.3%;
+    left:0;
+    width:100%;
+    height: 33.3%;
+    border-top:1px dashed rgba(255,255,255,0.5);
+    border-bottom:1px dashed rgba(255,255,255,0.5);
+}
+/*纵向虚线*/
+.cutwrap .dashed-col{
+	position: absolute;
+    left:33.3%;
+    top:0;
+    width:33.3%;
+    height: 100%;
+    border-left:1px dashed rgba(255,255,255,0.5);
+    border-right:1px dashed rgba(255,255,255,0.5);
+}
+/*四个方向的线，指示可以被拖动*/
+.line-t{
+	position: absolute;
+	display: block;
+	top:0;
+	left: 0;
+	height: 1px;
+	background-color: #e29bbb;
+	width: 100%;
+	opacity: 0.1;
+	cursor: n-resize;
+}
+.line-b{
+	position: absolute;
+	display: block;
+	bottom:0;
+	left: 0;
+	height: 1px;
+	background-color: #e29bbb;
+	width: 100%;
+	opacity: 0.1;
+	cursor: n-resize;
+}
+.line-l{
+	position: absolute;
+	display: block;
+	top:0;
+	left: 0;
+	height: 100%;
+	background-color: #e29bbb;
+	width: 1px;
+	opacity: 0.1;
+	cursor: n-resize;
+}
+.line-r{
+	position: absolute;
+	display: block;
+	top:0;
+	right: 0;
+	height: 100%;
+	background-color: #e29bbb;
+	width: 1px;
+	opacity: 0.1;
+	cursor: n-resize;
+}
+/*可以移动的点*/
+.point{
+	width:5px;
+	height:5px;
+	background-color: #e29bbb;
+	opacity: .75;
+	position: absolute;
+	z-index: 3; 
+	cursor: n-resize;
+}
+.point-t{
+    top:-3px;
+    left: 50%;
+    margin-left:-3px;
+}
+.point-tr{
+    top:-3px;
+    left: 100%;
+    margin-left:-3px;
+}
+.point-r{
+    top:50%;
+    left: 100%;
+    margin-left:-3px;
+    margin-top:-3px;
+}
+.point-rb{
+    top:100%;
+    left: 100%;
+    width:12px;
+	height:12px;
+	background-color: #e29bbb;
+	position: absolute;
+	z-index: 3; 
+	cursor: n-resize;
+	transform: translate3d(-50%,-50%,0);
+	-webkit-transform: translate3d(-50%,-50%,0);
+}
+
+.point-b{
+    left:50%;
+    top: 100%;
+    margin-left: -3px;
+    margin-top: -3px;
+}
+
+.point-bl{
+    left:0%;
+    top: 100%;
+    margin-left: -3px;
+    margin-top: -3px;
+}
+
+.point-l{
+    left:0%;
+    top: 50%;
+    margin-left: -3px;
+    margin-top: -3px;
+}
+
+.point-lt{
+    left:0%;
+    top: 0%;
+    margin-left: -3px;
+    margin-top: -3px;
+}
+.genimgwrap {
+	margin: 10px 0;
+	width:100%;
+	height: auto;
+}

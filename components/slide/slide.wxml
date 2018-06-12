@@ -7,7 +7,7 @@
 			<image src="../../images/Category.png" class="img"></image>
 		</view>
 		<view wx:for="{{slideList}}" wx:key="index">
-			<view class="slide-list">
+			<view class="slide-list" catchtap="doclup">
 				<view>{{item}}</view>
 			</view>
 	    </view>

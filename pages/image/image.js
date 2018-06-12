@@ -4,8 +4,32 @@ const app = getApp()
 
 Page({
   data: {
-    imageSrc:['../../images/2.jpg','../../images/3.jpg','../../images/5.jpg','../../images/6.jpg'],
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    imageSrc:[ 
+        {
+            src: '../../images/2.jpg',
+            id: 'watermark1',
+            height: 225
+        },
+        {
+            src: '../../images/3.jpg',
+            id: 'watermark2',
+            height: 225
+        },
+        {
+            src: '../../images/5.jpg',
+            id: 'watermark3',
+            height: 225
+        },
+        {
+            src: '../../images/6.jpg',
+            id: 'watermark4',
+            height: 225
+        },
+    ],
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    ww: '',
+    wh: '',
+    rate: '',
   },
   openImg: function (){
       wx.previewImage({
@@ -17,16 +41,19 @@ Page({
       })
   },
   addwatermark: function (e) {
-    var url = e.target.dataset.src
-    var img = new Image();
-    img.src = url;
-    console.log(img+'aaa')
-    var canvas = document.getElementById("watermark");
-    var ctx = canvas.getContext("2d");
-    ctx.drawImage(img,0,0);
-    ctx.font = "14px 微软雅黑";
-    ctx.fillStyle = "rgba(252,255,255,0.8)";
-    ctx.fillText('Dione',10,50); 
+      var id = e.target.dataset.id
+      var src = e.target.dataset.src 
+      var index = e.target.dataset.index 
+      var sw = e.detail.width
+      var sh = e.detail.height
+      var ssw = this.ww
+      var ssh = (this.ww/sw)*this.wh
+      const ctx = wx.createCanvasContext(id)
+      ctx.drawImage(src, 0, 0, sw, sh, 0, 0, ssw, ssh)
+      ctx.setFillStyle('rgba(252,255,255,0.8)');
+      ctx.setFontSize(20)
+      ctx.fillText('Dione watermark',80,80);
+      ctx.draw()
   },
   onShareAppMessage: function () {
     if (res.from === "button"){
@@ -38,6 +65,18 @@ Page({
     }
   },
   onLoad: function (options) {
-    
+      let self = this
+      wx.getSystemInfo({
+          success: function (res) {
+              self.ww = res.windowWidth
+              self.wh = res.windowHeight
+              self.rate = res.windowWidth / res.windowHeight
+              self.setData({
+                 ww: self.ww,
+                 wh: self.wh,
+                 rate: self.rate
+              })
+          }
+      })
   },
 })

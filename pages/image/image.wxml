@@ -3,11 +3,11 @@
 	<view wx:for="{{imageSrc}}"  wx:key="index">
     <view class="wrap-list">
     	<view class="wrap-logo" bindtap="openImg">
-    		<image src="{{item}}" mode="widthFix" bind="addwatermark" data-src="{{item}}">
+    		<image src="{{item.src}}" mode="widthFix" lazy-load="true" bindload="addwatermark" data-src="{{item.src}}" data-id="{{item.id}}" data-index="{{index}}">
     		</image>
+            <canvas canvas-id="{{item.id}}" style="width:100%;height:{{item.height}}px;">
+            </canvas>
     	</view>
     </view>
     </view>
-    <canvas id="watermark">
-    </canvas>
 </view>

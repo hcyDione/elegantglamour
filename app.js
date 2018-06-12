@@ -2,6 +2,7 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
+    let self = this
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
@@ -32,8 +33,16 @@ App({
         }
       }
     })
+    wx.getSystemInfo({
+       success: function (res) {
+        self.globalData.screenwidth = res.windowWidth
+        self.globalData.pixelRatio =  res.pixelRatio
+       }
+    }) 
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    screenwidth: 0,
+    pixelRatio: 0,
   }
 })

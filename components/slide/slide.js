@@ -37,6 +37,11 @@ Component({
             show:false,
             hidden:true,
         })
+    },
+    doclup:function () {
+        wx.navigateTo({
+          url: '../clup/clup'
+        })
     }
   }
 })

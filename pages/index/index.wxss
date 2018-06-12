@@ -7,3 +7,11 @@
 .mychild{
 	background-color:#e29bbb;
 }
+.exp{
+	width:100%;
+	color:#e29bbb;
+	height: 30rpx;
+	line-height: 30rpx;
+    font-size: 30rpx;
+    text-align:center;
+}

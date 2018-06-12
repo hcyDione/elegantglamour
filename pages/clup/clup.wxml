@@ -1,0 +1,39 @@
+<!--pages/wx-cropper/index.wxml-->
+<view class="wraper">
+<div class="wrapcontainer" style="height:{{blackH}}px;">
+    <image src="{{imgsrc}}" style="height:{{imageH}}px;">  
+    </image>
+    <div class="cutwrap" style="width:{{cutW}}px;height:{{cutH}}px;left:{{cutL}}px;top:{{cutT}}px;" bindtouchstart="startMove" bindtouchmove="isMoveing">
+        <div class="cuter">
+            <view class="dashed-row"></view>
+            <view class="dashed-col"></view>
+            <view class="line-t"></view>
+            <view class="line-l"></view>
+            <view class="line-r"></view>
+            <view class="line-b"></view>
+            <view class="point point-t"></view>
+            <view class="point point-tr"></view>
+            <view class="point point-r"></view>
+            <view class="point-rb"></view>
+            <view class="point point-b"></view>
+            <view class="point point-bl"></view>
+            <view class="point point-l"></view>
+            <view class="point point-lt"></view>
+        </div>
+    </div>
+</div> 
+<div class="genimgwrap">
+    <!--<image src="{{genimgsrc}}">  
+    </image>-->
+    <canvas canvas-id="gencanvas" style="width:{{cutW}}px;height:{{cutH}}px;">
+    </canvas>
+</div>
+<div class="bottom clearfix">
+  <div class="left">
+     <button catchtap="genImg">生成图片</button>
+  </div>
+  <div class="right">
+     <button catchtap="chooseImg">选择图片</button>
+  </div>
+</div>
+</view>

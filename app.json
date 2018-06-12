@@ -2,7 +2,9 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/image/image"
+    "pages/image/image",
+    "pages/canvas/canvas",
+    "pages/clup/clup"
   ],
   "window":{
     "backgroundTextStyle":"light",
