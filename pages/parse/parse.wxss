@@ -1,4 +1,5 @@
-/**index.wxss**/
+/**wxparse.wxss**/
+@import "/wxParse/wxParse.wxss";
 .container{
 	width:100%;
 	height:auto;
@@ -14,13 +15,4 @@
 	line-height: 30rpx;
     font-size: 30rpx;
     text-align:center;
-}
-button::after{ border: none; }
-button{
-	margin-top:20rpx;
-	width:200rpx;
-	height:100rpx;
-	line-height:100rpx;
-	background-color: #e29bbb;
-	color:#fff;
 }

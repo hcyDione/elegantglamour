@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/image/image",
     "pages/canvas/canvas",
-    "pages/clup/clup"
+    "pages/clup/clup",
+    "pages/parse/parse"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -22,6 +22,11 @@ Page({
       url: '../image/image'
     })
   },
+  doparse: function(e){
+    wx.navigateTo({
+      url: '../parse/parse'
+    })
+  },
   doclup:function (e) {
     wx.navigateTo({
       url: '../canvas/canvas'

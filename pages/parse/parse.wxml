@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="container">
+    <view class="exp">测试wxparse</view>
+    <template is="wxParse" data="{{wxParseData:essay.nodes}}"/>
+</view>

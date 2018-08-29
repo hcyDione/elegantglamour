@@ -5,4 +5,7 @@
     <slide slide-list="{{slidedata}}"></slide>
     <canvas canvas-id="clip" bindtap="doclup"></canvas>
     <view class="exp">图片裁剪(含像素比)</view>
+    <view class="exp">
+    	<button bindtap="doparse">打开wxparse解析</button>
+    </view>
 </view>
